@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: "home",
+    component: HomeComponent
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'strategy',
+    loadChildren: () => import('./strategy-onpush/strategy-onpush.module').then(m => m.StrategyOnpushModule)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
-  },
+  { path: "", pathMatch: "full", redirectTo: "home" }
 ];
 
 @NgModule({
