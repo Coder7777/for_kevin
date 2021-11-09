@@ -6,17 +6,20 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StrategyOnpushModule } from './strategy-onpush/strategy-onpush.module';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { MbsUpperCasePipe } from './pipes/MbsUpperCase.pipe';
+import { MbsConcatPipe } from './pipes/MbsConcat.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MbsConcatPipe,
+    MbsUpperCasePipe // pipe should be declared before you using it.
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), RouterModule, AppRoutingModule, CommonModule, StrategyOnpushModule],
+  imports: [BrowserModule, IonicModule.forRoot(), RouterModule, AppRoutingModule, CommonModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

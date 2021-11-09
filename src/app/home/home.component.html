@@ -5,16 +5,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink='/strategy/asyncpipe' expand="block">
-    Navigate to AsyncPipe1
-  </ion-button>
-  <ion-button routerLink='/strategy/cdr' expand="block">
-    Navigate to ChangeDetectiveRef
-  </ion-button>
-  <ion-button routerLink='/strategy/input' expand="block">
-    Navigate to @Input
-  </ion-button>
-  <ion-button routerLink='/strategy/eventemit' expand="block">
-    Navigate to EventEmit
-  </ion-button>
+  MbsUpperCase:
+  <p>{{content | MbsUpperCase}}</p>
+
+  MbsConcat:
+  <p>{{content | MbsConcat:" 2021-11-08"}}</p>
 </ion-content>

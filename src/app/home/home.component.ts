@@ -7,12 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
- 
+
+  public content: string = "hello modern beauty";
+
   constructor(private _router: Router) { }
 
   ngOnInit() {
   }
-  
+
   onNaviClick(url: string) {
     console.log(url);
     this._router.navigateByUrl(url);
